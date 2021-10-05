@@ -10,7 +10,17 @@
 //
 //
 // -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
+const username = Cypress.env('user');
+const pass = Cypress.env('password');   
+
+Cypress.Commands.add('validVisitLogin', () => {
+    cy.visit('/basic_auth', {
+        auth: {
+          username,
+          pass,
+        },
+      })
+    })
 //
 //
 // -- This is a child command --
