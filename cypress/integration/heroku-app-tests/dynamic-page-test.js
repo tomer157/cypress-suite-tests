@@ -1,4 +1,3 @@
-import 'cypress-wait-until';
 import DynamicPage from '../../support/pages/DynamicPage';
 
 
@@ -18,7 +17,7 @@ describe('dynamic page tests',() => {
         cy.get('button').should('be.visible').click();
         
       
-        cy.wait(2200);    
+        cy.wait(2500);    
         const a  = dynamicPage.getHelloSuccessMsg();
        
     });
